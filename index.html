@@ -1,63 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Giulia Buzzetti — AI & Robotics Research Engineer"
-    />
-    <title>Giulia Buzzetti</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giulia Buzzetti - AI & Robotics Research Engineer</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <main class="profile">
-      <img
-        class="profile__photo"
-        src="images/photo.jpg"
-        alt="Portrait of Giulia Buzzetti"
-      />
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-      <h1>Giulia Buzzetti</h1>
-      <p class="profile__role">AI &amp; Robotics Research Engineer</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Giulia Buzzetti</h1>
+            <p class="subtitle">AI & Robotics Engineer | Ph.D.</p>
+            <a href="#connect" class="btn-reach">REACH OUT</a>
+        </div>
+    </section>
 
-      <a class="email-button" href="mailto:giulia.buzzetti4@gmail.com">
-        Email me
-      </a>
+    <!-- About Me Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Me<br><span class="pronouns">(she/her)</span></h2>
+                <p>I'm an engineer with a PhD in Industrial Innovation and a strong background in software development, artificial intelligence, and applied mathematics.</p>
+                <p>During my PhD at the University of Trento, in collaboration with Enchanted Tools, I worked on reinforcement learning for robotics, developing simulation environments, training pipelines, and deploying control strategies on real robotic hardware.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Giulia Buzzetti">
+            </div>
+        </div>
+    </section>
 
-      <nav class="social-links" aria-label="Social media profiles">
-        <a
-          href="https://github.com/giu950"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Giulia Buzzetti on GitHub"
-        >
-          <img
-            class="social-links__github"
-            src="images/GitHub_Invertocat_Black_Clearspace.png"
-            alt=""
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/giulia-buzzetti-ph-d-6a3b0b15a/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Giulia Buzzetti on LinkedIn"
-        >
-          <img
-            class="social-links__linkedin"
-            src="images/icons8-linkedin-26.png"
-            alt=""
-          />
-        </a>
-      </nav>
-    </main>
-  </body>
+    <!-- Work Section -->
+    <section class="work-section">
+        <div class="work-container">
+            <h2>Works</h2>
+            <div class="work-list">
+                
+                <div class="work-item">
+                    <h3>REINFORCEMENT LEARNING FOR BALLBOT BALANCING,</h3>
+                    <p class="work-meta">G. Buzzetti, D. Zappetti and G. Iacca, CoDIT 2026. DOI:<a href="https://doi.org/10.1109/CoDIT70676.2026.11631024" target="_blank">10.1109/CoDIT70676.2026.11631024</a></p>
+                    <p>This study evaluates simulation modeling for ballbot reinforcement learning, demonstrating that anisotropic friction provides superior stability and velocity tracking.</p>
+                </div>
+
+                <div class="work-item">
+                    <h3>A MULTI-POLICY APPROACH BASED ON CLUSTERING FOR MINIMIZING THE DAMAGE ON A FALLING BALLBOT</h3>
+                    <p class="work-meta">G. Buzzetti, M. Aractingi, D. Zappetti, G. Iacca, CoDIT 2025. DOI:<a href="https://doi.org/10.1109/CoDIT66093.2025.11321766" target="_blank">10.1109/CoDIT66093.2025.11321766</a></p>
+                    <p>This work introduces a multi-policy approach combining clustering and reinforcement learning to minimize damage during falls in humanoid ballbot robots.</p>
+                </div>
+
+                <div class="work-item">
+                    <h3>A REINFORCEMENT LEARNING METHOD TO MINIMIZE THE DAMAGE ON A FALLING BALLBOT</h3>
+                    <p class="work-meta">G. Buzzetti, D. Zappetti, G. Iacca, ERF 2025. DOI: <a href="https://doi.org/10.1007/978-3-031-76424-0_15" target="_blank">10.1007/978-3-031-76424-0_15</a></p>
+                    <p>This work investigates the use of deep reinforcement learning to reduce fall damage in Miroki, a humanoid ballbot robot. We develop an RL framework in Isaac Gym to train a control policy that uses the robot's arms to mitigate impacts during falls. Our results show a 52% reduction in fall damage compared to uncontrolled falls.</p>
+                </div>
+
+                <div class="work-item">
+                    <h3>REINFORCEMENT LEARNING FRAMEWORK FOR AUTONOMOUS DRIVING WITH CARMAKER</h3>
+                    <p class="work-meta"><a href="https://github.com/giu950/CarmakerAI" target="_blank">https://github.com/giu950/CarmakerAI</a></p>
+                    <p class="tech-stack"><strong>Technologies:</strong> Python · Reinforcement Learning · PPO · IPG CarMaker · Gym · Stable-Baselines3</p>
+                    <p>This project provides a Python framework for training and evaluating reinforcement learning agents in the IPG CarMaker simulator. It integrates CarMaker with Gym and Stable-Baselines3, allowing users to define custom environments, reward functions, and control strategies.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect with me Section -->
+    <section id="connect" class="connect-section">
+        <div class="connect-container">
+            <h2>Connect with me</h2>
+            <div class="contact-details">
+                <h3>Giulia Buzzetti</h3>
+                <p><a href="mailto:giulia.buzzetti4@gmail.com">giulia.buzzetti4@gmail.com</a></p>
+                <p><a href="tel:+33749287704">+33749287704</a></p>
+                <p class="resume-link">Find my resume <a href="BuzzettiGiuliaCV.pdf" download>here</a></p>
+            </div>
+            <div class="social-block">
+                <div class="social-icons">
+                    <a href="https://github.com/giu950" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/giulia-buzzetti-ph-d-6a3b0b15a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
 </html>

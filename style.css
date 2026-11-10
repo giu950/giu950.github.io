@@ -1,133 +1,270 @@
-:root {
-  --ink: #000000;
-  --paper: #ffffff;
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('fonts/HKGrotesk-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('fonts/HKGrotesk-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('fonts/HKGrotesk-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Global Reset & Styling */
 * {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  min-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Open Sans", Arial, sans-serif;
+    font-family: 'HK Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F4F1EB;
+    color: #111111;
+    line-height: 1.6;
 }
 
-.profile {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 1.5rem 1.5rem;
-  text-align: center;
-  transform: translateY(-90px);
+/* 1. Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changes vertical alignment from center to top */
+    padding-top: 32vh;       /* Controls how far down from the top it starts */
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.profile__photo {
-  width: 263px;
-  height: 263px;
-  display: block;
-  object-fit: cover;
-  object-position: center 50%;
+.hero-content h1 {
+    font-size: 5.8rem;
+    font-weight: 700;
+    margin-bottom: -15px;
+    letter-spacing: 2.0px;
 }
 
-h1 {
-  margin: 2.75rem 0 0;
-  font-size: 2.33rem;
-  line-height: 1;
-  letter-spacing: -0.02em;
+.hero-content .subtitle {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: #222;
 }
 
-.profile__role {
-  margin: 1.75rem 0 0;
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+.btn-reach {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 18px 88px;        /* Increased top/bottom and left/right padding */
+    font-size: 1.0rem;         /* Made text slightly larger */
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 0px;
+    min-width: 220px;          /* Sets a minimum width for the box */
+    text-align: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.email-button {
-  width: 263px;
-  margin-top: 1.75rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--ink);
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 0.92rem;
-  font-weight: 700;
-  line-height: 1.25rem;
-  text-decoration: none;
-  transition: background-color 160ms ease, color 160ms ease;
+.btn-reach:hover {
+    opacity: 0.85;
+    transform: translateY(-2px); /* Adds a subtle lift effect on hover */
 }
 
-.email-button:hover,
-.email-button:focus-visible {
-  background: var(--paper);
-  color: var(--ink);
+/* 2. About Me Section */
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
 }
 
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.45rem;
-  margin-top: 1.45rem;
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 60px;
 }
 
-.social-links a {
-  display: grid;
-  place-items: center;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
+.about-text {
+    flex: 1;
 }
 
-.social-links a:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 2px;
+.about-text h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
 }
 
-.social-links__github {
-  width: 65px;
-  height: 65px;
-  object-fit: contain;
+.about-text .pronouns {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #444;
 }
 
-.social-links__linkedin {
-  width: 43px;
-  height: 43px;
-  object-fit: contain;
+.about-text p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #2c2c2c;
 }
 
-@media (max-width: 480px), (max-height: 720px) {
-  .profile {
-    padding-top: 2rem;
-  }
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
-  .profile__photo {
-    width: min(263px, 70vw);
-    height: min(263px, 70vw);
-  }
+.about-image img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 50%; /* Creates the circular photo layout */
+}
 
-  h1 {
-    margin-top: 2rem;
-    font-size: 2rem;
-  }
+/* 3. Work Section */
+.work-section {
+    min-height: 100vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-  .profile__role {
-    margin-top: 1.25rem;
-    font-size: 1.2rem;
-  }
+.work-container h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
 
-  .email-button {
-    width: min(263px, 70vw);
-    margin-top: 1.5rem;
-  }
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.work-item h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.work-meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.work-meta a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.work-item p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+/* 4. Connect Section */
+.connect-section {
+    min-height: 100vh;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.connect-container h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.contact-details h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.contact-details a {
+    color: inherit;
+    text-decoration: underline;
+    font-size: 1.6rem; /* Adjust this value as needed */
+}
+
+.contact-details a:hover {
+    opacity: 0.7;
+}
+
+.resume-link {
+    font-size: 1.6rem; 
+    margin-top: 15px;
+}
+
+.resume-link a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 1.6rem; /* Adjust this value to match */
+}
+
+.social-block {
+    margin-top: 50px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    padding-left: 70px;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: #000;
+    transition: opacity 0.2s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column-reverse;
+        text-align: left;
+        gap: 30px;
+    }
+    
+    .about-image img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-text h2, .work-container h2, .connect-container h2 {
+        font-size: 2.2rem;
+    }
 }
